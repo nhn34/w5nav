@@ -378,6 +378,36 @@ textarea {
 /* =============
     Navigation
 ============= */
+header section:nth-child(1) {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem; }
+
+header section:nth-child(2) a {
+  background-color: #F8C832;
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem; }
+
+header nav {
+  display: none; }
+  header nav ul li {
+    border-bottom: 1px solid #F8C832; }
+    header nav ul li a:link, header nav ul li a:visited {
+      color: white;
+      font-family: 'Roboto Slab', serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      padding: 20px 0;
+      display: inline-block; }
+  header nav ul li:last-child {
+    border: none; }
+
 /* =============
     Header
 ============= */
