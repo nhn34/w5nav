@@ -175,6 +175,19 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/scss/base/_base.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/base/_base.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/base/_normalize.scss": {
 		"aP": 0,
 		"bl": 0,

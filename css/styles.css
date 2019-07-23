@@ -315,9 +315,6 @@ h1, h2, h3, h4, h5, p, ul, figure {
   margin: 0;
   padding: 0; }
 
-body {
-  background-color: red; }
-
 ul li {
   list-style: none; }
 
@@ -387,25 +384,25 @@ textarea {
 header {
   display: grid;
   grid-template-columns: 20% auto;
-  padding: 10px; }
-  header nav i {
-    font-size: 1.875rem;
-    margin-top: 8px; }
-  header aside {
-    text-align: right; }
-    header aside a:link,
-    header aside a:visited {
-      background-color: #F8C832;
-      border-radius: 1.4375rem;
-      color: #000;
-      display: inline-block;
-      font-size: 1.125rem;
-      font-weight: 700;
-      padding: 13px 25px; }
-    header aside a:active,
-    header aside a:hover {
-      background-color: #F8C832;
-      color: #fff; }
+  grid-template-areas: "burger survival" "nav nav"; }
+  header section:nth-child(1) {
+    grid-area: burger;
+    padding: 10px; }
+    header section:nth-child(1) button {
+      border: none;
+      background-color: white;
+      outline: none; }
+  header section:nth-child(2) {
+    grid-area: survival;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px; }
+    header section:nth-child(2) a span {
+      display: none; }
+  header nav {
+    grid-area: nav;
+    background-color: #222222; }
 
 /* =============
     Footer

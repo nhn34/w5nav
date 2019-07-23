@@ -4,33 +4,36 @@
 header {
     display: grid;
     grid-template-columns: 20% auto;
-    padding: 10px;
 
-    nav {
-        i {
-            font-size: rem-calc(30);
-            margin-top: 8px;
+
+    grid-template-areas:
+    "burger survival"
+    "nav nav";
+
+    section:nth-child(1){
+        grid-area: burger;
+        padding: 10px;
+        button {
+            border: none;
+            background-color: white;
+            outline: none;
         }
     }
-
-    aside {
-        text-align: right;
-
-        a:link,
-        a:visited {
-            background-color: $sunflower;
-            border-radius: rem-calc(23);
-            color: $black;
-            display: inline-block;
-            font-size: rem-calc(18);
-            font-weight: 700;
-            padding: 13px 25px;
+    section:nth-child(2){
+        grid-area: survival;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+        a {
+            span {
+                display: none;
+            }
         }
+    }
+    nav {
+        grid-area: nav;
+        background-color: $charcoal;
 
-        a:active,
-        a:hover {
-            background-color: $sunflower;
-            color: $white;
-        }
     }
 }
