@@ -1,0 +1,54 @@
+/* =============
+    Heroes
+============= */
+
+#hero{
+    height: 358px;
+    background-image: url('../img/hero/hero.jpg');
+    background-size: cover;
+    background-position: -100px 0;
+
+    @include sm{
+        height: 400px;
+    }
+
+    @include md{
+        height: 600px;
+    }
+
+    @include lg{
+        height: 700px;
+    }
+
+    @include xl{
+        height: 900px;
+    }
+
+    @include xxl{
+        height: 90vh;
+    }
+}
+
+#hero-2{
+    height: 421px;
+    background-image: url('../img/hero/hero-2.jpg');
+    background-size: cover;
+    background-position: right bottom;
+
+    @include sm{
+        background-position: center;
+        height: 475px;
+    }
+
+    @include md{
+        height: 525px;
+    }
+
+    @include lg{
+        height: 600px;
+    }
+
+    @include xl{
+        height: 100vh;
+    }
+}

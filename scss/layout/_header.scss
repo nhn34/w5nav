@@ -1,0 +1,36 @@
+/* =============
+    Header
+============= */
+header {
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 10px;
+
+    nav {
+        i {
+            font-size: rem-calc(30);
+            margin-top: 8px;
+        }
+    }
+
+    aside {
+        text-align: right;
+
+        a:link,
+        a:visited {
+            background-color: $sunflower;
+            border-radius: rem-calc(23);
+            color: $black;
+            display: inline-block;
+            font-size: rem-calc(18);
+            font-weight: 700;
+            padding: 13px 25px;
+        }
+
+        a:active,
+        a:hover {
+            background-color: $sunflower;
+            color: $white;
+        }
+    }
+}

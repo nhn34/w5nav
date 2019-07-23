@@ -1,0 +1,17 @@
+/* =============
+    Typography
+============= */
+body{
+    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Comfortaa', cursive;
+    // font-family: 'Roboto Slab', serif;
+    // font-family: 'Pacifico', cursive;
+}
+
+p{
+    font-size: rem-calc(16);
+
+    @include md{
+        font-size: rem-calc(18);
+    }
+}

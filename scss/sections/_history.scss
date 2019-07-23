@@ -1,0 +1,98 @@
+/* =============
+    History
+============= */
+#history {
+    @include lg {
+        display: grid;
+        grid-template-columns: auto 80% auto;
+        grid-template-areas: ". history .";
+    }
+    @include xl {
+        grid-template-columns: auto 1375px auto;
+    }
+
+    > div {
+        @include lg {
+            grid-area: history;
+        }
+        @include xl {
+            padding: 0 20%;
+        }
+
+        section {
+            background-image: url("../img/history/history.jpg");
+            background-position: -40px -40px;
+            border-radius: 100px;
+            height: 113px;
+            margin: 0 auto;
+            width: 113px;
+
+            @include lg{
+                background-position: -20px -40px;
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        article:nth-child(2) {
+            h1 {
+                color: $sunflower;
+                font-family: 'Comfortaa', cursive;
+                font-size: rem-calc(31);
+                font-weight: 700;
+                margin: 52px 0 0;
+                text-align: center;
+            }
+
+            h1:nth-child(2) {
+                font-size: rem-calc(48);
+                margin: 0 0 37px;
+                @include sm {
+                    font-size: rem-calc(53);
+                }
+            }
+
+            h4 {
+                font-size: rem-calc(17);
+                font-weight: 400;
+                text-align: center;
+            }
+
+            p {
+                font-size: rem-calc(18);
+                font-weight: 600;
+                line-height: rem-calc(22);
+                margin-top: 30px;
+                text-align: justify;
+            }
+        }
+
+        article:nth-child(3) {
+            margin-top: 40px;
+            @include sm {
+                display: grid;
+                grid-template-columns: auto 90% auto;
+                grid-template-areas: ". history-sub .";
+            }
+            @include md {
+                grid-template-columns: auto 80% auto;
+            }
+
+            div {
+                @include sm {
+                    grid-area: history-sub;
+                }
+
+                h3 {
+                    font-size: rem-calc(16);
+                }
+
+                p {
+                    font-size: rem-calc(16);
+                    line-height: rem-calc(22);
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+/* =============
+    Gallery
+============= */
+#gallery {
+
+    @include xl{
+        grid-template-columns: auto 1375px auto;
+    }
+
+    ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas:
+        "gallery-1"
+        "gallery-2"
+        "gallery-2"
+        "gallery-3"
+        "gallery-4";
+        grid-template-rows: repeat(5, 234px);
+
+        @include sm{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "gallery-1 gallery-1"
+            "gallery-2 gallery-2"
+            "gallery-2 gallery-2"
+            "gallery-3 gallery-4";
+            grid-template-rows: repeat(4, 275px);
+        }
+
+        @include md{
+            grid-template-areas:
+            "gallery-2 gallery-4"
+            "gallery-2 gallery-1"
+            "gallery-3 gallery-5";
+
+            grid-template-rows: repeat(3, 300px);
+        }
+
+        @include lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            "gallery-2 gallery-6 gallery-4"
+            "gallery-2 gallery-1 gallery-7"
+            "gallery-3 gallery-5 gallery-7";
+        }
+
+        li {
+            background-size: cover;
+            height: 100%;
+        }
+
+        li:nth-child(1) {
+            align-items: center;
+            color: $sunflower;
+            display: flex;
+            font-family: 'Pacifico', cursive;
+            font-size: rem-calc(43);
+            grid-area: gallery-1;
+            justify-content: center;
+        }
+
+        li:nth-child(2) {
+            background-image: url("../img/gallery/gallery-1.jpg");
+            grid-area: gallery-2;
+        }
+
+        li:nth-child(3) {
+            background-image: url("../img/gallery/gallery-2.jpg");
+            grid-area: gallery-3;
+        }
+
+        li:nth-child(4) {
+            background-image: url("../img/gallery/gallery-3.jpg");
+            grid-area: gallery-4;
+        }
+
+        li:nth-child(5) {
+            background-image: url("../img/gallery/gallery-4.jpg");
+            grid-area: gallery-5;
+        }
+
+        li:nth-child(6) {
+            background-image: url("../img/gallery/gallery-5.jpg");
+            grid-area: gallery-6;
+        }
+
+        li:nth-child(7) {
+            background-image: url("../img/gallery/gallery-6.jpg");
+            grid-area: gallery-7;
+        }
+    }
+}

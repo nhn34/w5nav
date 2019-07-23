@@ -1,0 +1,50 @@
+/* =============
+    Base
+============= */
+h1,h2,h3,h4,h5,p,ul,figure{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    li{
+        list-style: none;
+    }
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". content .";
+    padding: 60px 0;
+
+    @include lg{
+        padding: 80px 0;
+    }
+
+    >div{
+        grid-area: content;
+    }
+}
+
+
+.show-for-md{
+    display: none;
+
+    @include md{
+        display: block;
+    }
+}
+
+.show-for-lg{
+    display: none;
+
+    @include lg{
+        display: block;
+    }
+}

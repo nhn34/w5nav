@@ -1,0 +1,122 @@
+/* =============
+    Skills
+============= */
+#skills {
+    background-color: $charcoal;
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1375px auto;
+        grid-template-areas: ". skills .";
+    }
+
+    >div{
+
+        @include lg{
+            display: grid;
+             grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @include xl{
+            grid-area: skills;            
+        }
+
+        >section:nth-child(1) {
+            background-image: url("../img/skills/skills.jpg");
+            background-position: -130px 0;
+            background-size: cover;
+            height: 373px;
+
+            @include md{
+                height: 450px;
+            }
+
+            @include lg{
+                height: 100%;
+                background-position: center;
+            }
+        }
+
+        > section:nth-child(2) {
+
+            color: $white;
+
+            @include sm{
+                display: grid;
+                grid-template-columns: auto 90% auto;
+                grid-template-areas: ". skills-content .";
+            }
+
+            @include md{
+                grid-template-columns: auto 80% auto;
+            }
+
+            @include lg{
+                grid-template-columns: auto 90% auto;
+            }
+
+            >div{
+                grid-area: skills-content;
+
+                h1 {
+                    font-family: 'Comfortaa', cursive;
+                    font-size: rem-calc(21);
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    line-height: rem-calc(29);
+                    margin-bottom: 15px;
+                }
+
+                section {
+                    .flex-container {
+                        display: flex;
+
+                        h4 {
+                            font-size: rem-calc(18);
+                            font-weight: 400;
+                        }
+
+                        h3 {
+                            font-size: rem-calc(18);
+                            margin-left: auto;
+                        }
+                    }
+
+                    .black-bg {
+                        background-color: $black;
+                        display: grid;
+                        height: 9px;
+                        margin: 10px 0 55px;
+
+                        div {
+                            background-color: $sunflower;
+                        }
+                    }
+                }
+            }
+
+
+
+            section:nth-child(1) {
+                .black-bg {
+                    grid-template-columns: 62% auto;
+                }
+            }
+
+            section:nth-child(2) {
+                .black-bg {
+                    grid-template-columns: 90% auto;
+                }
+            }
+
+            section:nth-child(3) {
+                .black-bg {
+                    grid-template-columns: 95% auto;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

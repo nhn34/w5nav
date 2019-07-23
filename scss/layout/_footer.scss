@@ -1,0 +1,42 @@
+/* =============
+    Footer
+============= */
+footer {
+    background-color: $sunflower;
+    color: $black;
+    padding: 45px 0;
+    text-align: center;
+
+    h1 {
+        font-size: rem-calc(20);
+        margin-bottom: 15px;
+
+        @include md{
+            font-size: rem-calc(26);
+        }
+
+        span {
+            color: $white;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+            padding: 0 10px;
+
+            a:link,
+            a:visited {
+                color: $black;
+                font-size: rem-calc(30);
+            }
+
+            a:active,
+            a:hover {
+                color: $white;
+            }
+        }
+    }
+}
