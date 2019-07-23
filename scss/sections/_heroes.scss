@@ -3,6 +3,7 @@
 ============= */
 
 #hero{
+    margin-top: 60px;
     height: 358px;
     background-image: url('../img/hero/hero.jpg');
     background-size: cover;
@@ -18,6 +19,7 @@
 
     @include lg{
         height: 700px;
+        margin-top: 60px;
     }
 
     @include xl{

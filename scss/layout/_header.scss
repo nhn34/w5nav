@@ -2,38 +2,55 @@
     Header
 ============= */
 header {
+    background-color: white;
     display: grid;
+    grid-template-areas: "burger survival" "nav nav";
     grid-template-columns: 20% auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @include lg {
+        grid-template-areas: "nav survival";
+        grid-template-columns: 70% auto;
+    }
 
-
-    grid-template-areas:
-    "burger survival"
-    "nav nav";
-
-    section:nth-child(1){
+    section:nth-child(1) {
         grid-area: burger;
         padding: 10px;
+        @include lg {
+            display: none;
+        }
+
         button {
-            border: none;
             background-color: white;
+            border: none;
             outline: none;
         }
     }
-    section:nth-child(2){
-        grid-area: survival;
-        display: flex;
-        justify-content: flex-end;
+
+    section:nth-child(2) {
         align-items: center;
+        display: flex;
+        grid-area: survival;
+        justify-content: flex-end;
         padding: 10px;
+
         a {
             span {
                 display: none;
+                @include lg {
+                    display: block;
+                }
             }
         }
     }
-    nav {
-        grid-area: nav;
-        background-color: $charcoal;
 
+    nav {
+        background-color: $charcoal;
+        grid-area: nav;
+        @include lg {
+            background-color: white;
+            display: block !important;
+        }
     }
 }

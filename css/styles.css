@@ -379,32 +379,65 @@ textarea {
     Navigation
 ============= */
 header section:nth-child(1) {
-  display: flex;
   align-items: center;
+  display: flex;
   font-size: 1.125rem; }
 
-header section:nth-child(2) a {
-  background-color: #F8C832;
-  color: black;
-  height: 40px;
-  width: 40px;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
+header section:nth-child(2) a:link,
+header section:nth-child(2) a:visited {
   align-items: center;
-  font-size: 1.125rem; }
+  background-color: #F8C832;
+  border-radius: 100px;
+  color: black;
+  display: flex;
+  font-size: 1.125rem;
+  height: 40px;
+  justify-content: center;
+  width: 40px; }
+  @media (min-width: 980px) {
+    header section:nth-child(2) a:link,
+    header section:nth-child(2) a:visited {
+      border-radius: 23px;
+      height: inherit;
+      padding: 7px 10px;
+      width: inherit; }
+      header section:nth-child(2) a:link i,
+      header section:nth-child(2) a:visited i {
+        margin-right: 10px; } }
+
+@media (min-width: 980px) {
+  header section:nth-child(2) a:hover a:active {
+    background-color: black;
+    color: #F8C832; } }
 
 header nav {
   display: none; }
+  @media (min-width: 980px) {
+    header nav ul {
+      display: flex; } }
   header nav ul li {
     border-bottom: 1px solid #F8C832; }
-    header nav ul li a:link, header nav ul li a:visited {
+    @media (min-width: 980px) {
+      header nav ul li {
+        border: none;
+        border-right: 1px solid black;
+        padding: 0 20px; } }
+    header nav ul li a:link,
+    header nav ul li a:visited {
       color: white;
+      display: inline-block;
       font-family: 'Roboto Slab', serif;
       font-size: 1.125rem;
       font-weight: 700;
-      padding: 20px 0;
-      display: inline-block; }
+      padding: 20px 0; }
+      @media (min-width: 980px) {
+        header nav ul li a:link,
+        header nav ul li a:visited {
+          color: black; } }
+    @media (min-width: 980px) {
+      header nav ul li a:active,
+      header nav ul li a:hover {
+        color: #F8C832; } }
   header nav ul li:last-child {
     border: none; }
 
@@ -412,27 +445,45 @@ header nav {
     Header
 ============= */
 header {
+  background-color: white;
   display: grid;
+  grid-template-areas: "burger survival" "nav nav";
   grid-template-columns: 20% auto;
-  grid-template-areas: "burger survival" "nav nav"; }
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  @media (min-width: 980px) {
+    header {
+      grid-template-areas: "nav survival";
+      grid-template-columns: 70% auto; } }
   header section:nth-child(1) {
     grid-area: burger;
     padding: 10px; }
+    @media (min-width: 980px) {
+      header section:nth-child(1) {
+        display: none; } }
     header section:nth-child(1) button {
-      border: none;
       background-color: white;
+      border: none;
       outline: none; }
   header section:nth-child(2) {
-    grid-area: survival;
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
+    display: flex;
+    grid-area: survival;
+    justify-content: flex-end;
     padding: 10px; }
     header section:nth-child(2) a span {
       display: none; }
+      @media (min-width: 980px) {
+        header section:nth-child(2) a span {
+          display: block; } }
   header nav {
-    grid-area: nav;
-    background-color: #222222; }
+    background-color: #222222;
+    grid-area: nav; }
+    @media (min-width: 980px) {
+      header nav {
+        background-color: white;
+        display: block !important; } }
 
 /* =============
     Footer
@@ -467,6 +518,7 @@ footer {
     Heroes
 ============= */
 #hero {
+  margin-top: 60px;
   height: 358px;
   background-image: url("../img/hero/hero.jpg");
   background-size: cover;
@@ -479,7 +531,8 @@ footer {
       height: 600px; } }
   @media (min-width: 980px) {
     #hero {
-      height: 700px; } }
+      height: 700px;
+      margin-top: 60px; } }
   @media (min-width: 1375px) {
     #hero {
       height: 900px; } }
