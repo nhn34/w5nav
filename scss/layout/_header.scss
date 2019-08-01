@@ -4,13 +4,22 @@
 header {
     display: grid;
     grid-template-columns: 20% auto;
-    padding: 10px;
+    padding: 1%;
+    position: fixed;
+    width: 99%;
+    background-color: $white;
+    z-index: 100;
 
-    nav {
-        i {
-            font-size: rem-calc(30);
-            margin-top: 8px;
-        }
+    // nav {
+    //     i {
+    //         font-size: rem-calc(30);
+    //         margin-top: 8px;
+    //     }
+    // }
+
+    section {
+        display: flex;
+        align-items: center;
     }
 
     aside {
